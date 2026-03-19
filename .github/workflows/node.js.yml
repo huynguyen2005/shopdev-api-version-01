@@ -25,7 +25,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
 
-    - run: |
-        echo "PORT=${{ secrets.PORT || 3000 }}" > .env
-
     - run: pm2 restart shopdev-backend
